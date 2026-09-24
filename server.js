@@ -8,6 +8,10 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+
+// server static files
+app.use(express.static("public"))
+
 app.use("/api/notes", notesRouter);
 
 connectDB().then( () => {
