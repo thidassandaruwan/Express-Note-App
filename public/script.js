@@ -92,7 +92,6 @@ async function handleNoteClick(event) {
 
     // get the note id from the note element
     const noteId = clickedNote.dataset.noteId;
-    console.log(noteId)
 
     // if delete note is clicked
     if (deleteRequest){
@@ -241,8 +240,6 @@ async function renderNotes() {
     if(notes.length === 0){
         return`<h1> ERROR! </h1>`
     }
-
-    console.log(notes)
 
     const notesHTML = notes.map((note) => {
         return `
